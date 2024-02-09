@@ -2,8 +2,3 @@
 .idea/
 gradle/
 libs/
-gradlew.bat
-build.grade.kts
-gradle.properties
-local.properties
-settings.gradle.kts
