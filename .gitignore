@@ -2,4 +2,5 @@
 .idea/
 gradle/
 libs/
-gradle-wrapper.properties
+gradle/wrapper/gradle-wrapper.properties
+local.properties
