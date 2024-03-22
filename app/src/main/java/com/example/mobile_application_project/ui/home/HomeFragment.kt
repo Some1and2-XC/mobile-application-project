@@ -5,9 +5,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Button
+
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.mobile_application_project.databinding.FragmentHomeBinding
+import androidx.compose.material.Button
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+
+
+@Composable
+fun buttonThing(onClick: () -> Unit) {
+    Button(onClick = {onClick() }) {
+        Text("Hello")
+    }
+}
+
 
 class HomeFragment : Fragment() {
 
@@ -32,6 +46,8 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
+
         return root
     }
 
@@ -39,4 +55,5 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }
